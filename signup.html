@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="Jtest.css">
+</head>
+<body> 
+    <div class="auth-div">
+    <form class="auth-form" method="post" action="Jtest.php" onsubmit="return validateForm()">
+        <input type="text" name="pname" placeholder="Name" required> <br>        
+        <input type="text" name="username" id="username" placeholder="Username" required> <br>
+        <input type="password" name="password" id="password" placeholder="Password" required> <br>
+        <input type="password" name="confirm" id="confirm" placeholder="Confirm" required> <br>
+        <input type="hidden" name="action" value="signup">
+        <button class="auth-button" type="submit">Sign up</button>
+      </form>
+      <p id="error"></p>
+    </div>
+</body>
+</html>
+
+<script>
+   function validateForm() {
+
+			var password = document.getElementById("password").value;
+			var confirm = document.getElementById("confirm").value;
+			var username = document.getElementById("username").value;
+
+            document.getElementById("password").style.boxShadow="none"
+            document.getElementById("confirm").style.boxShadow="none"
+            document.getElementById("username").style.boxShadow="none"
+
+			if (password.length < 8) {
+				alert("Password must be at least 8 characters long");
+                document.getElementById("password").style.boxShadow="0px 0px 20px 10px red"
+
+				return false;
+			}
+
+			if (password != confirm) {
+				alert("Passwords do not match");
+                document.getElementById("confirm").style.boxShadow="0px 0px 20px 10px red"
+				return false;
+			}
+
+			if (!/^[a-zA-Z0-9]+$/.test(username)) {
+				alert("Username must only contain alphanumeric characters");
+                document.getElementById("username").style.boxShadow="0px 0px 20px 10px red"
+				return false;
+			}
+
+			return true;
+		}
+</script>

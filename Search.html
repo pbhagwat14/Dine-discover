@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIT Eateries</title>
+    <link rel="stylesheet" href="Jtest.css">
+</head>
+<body>
+    <header>
+    
+    <h1 id="top">VITEs</h1>
+    <div id="custom-name"></div>
+        <form action="" method="post" class="search-form">
+        <input type="search" name="search" id="search-bar"  placeholder="Search..." required>
+
+        
+        <button type="button" value="submit" name="submit1" id="search-button" onclick="loadDoc()"><img src="searchico.jpg"></button>
+        <!-- <button type="button"  name="submit" onclick="loadDoc()">Change Content</button> -->
+        </form>
+        <div id="radion">
+        <input type="radio" id="boy" name="gender" value="b">
+        <label for="boy"><b>b</b>oys</label>
+        <input type="radio" id="girl" name="gender" value="g">
+        <label for="girl"><b>g</b>irls</label>
+        <input type="radio" id="unisex" name="gender" value="u">
+        <label for="unisex"><b>u</b>nisex</label>
+        <input type="radio" id="all" name="gender" value="a">
+        <label for="all">All</label>
+        </div>
+
+        <div id="demo"></div>
+    </header>
+    <main id="main-search">
+        
+    </main>
+
+    <aside class="sidebar">
+        <div class="side-search">
+            <b>Search</b>
+        </div>
+
+        <div class="sidemain">
+            <header class="side-head">Eateries</header>
+            <ul>
+            <li><a class="menuitem" href="MainCanteen.html">Main Canteen</a></li>
+           <li> <a class="menuitem" href="quickBites.html">Quick Bites</a></li>
+           <li><a class="menuitem" href="flora.html">Flora Cafe</a> </li>
+        </ul>
+
+        <header class="side-head">Auth</header>
+            <div id="navbar-logged-out">    
+        <ul><li> <a href="signup.html" >Signup</a> </li>
+        <li> <a href="login.html" >login</a> </li> </ul>
+        </div>
+        <div id="navbar-logged-in">
+            <ul>
+           <li><span id="user-name">Hello!</span></li> 
+           <li> <a href="logout.php" >logout</a> </li> </ul>
+        </div>
+        
+        
+   
+        </div>
+        
+    </aside>
+   
+
+    <script src="Jtest.js"></script>
+    
+</body>
+</html>
